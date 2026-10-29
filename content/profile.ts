@@ -22,16 +22,19 @@ export type Education = {
 export type Island = {
   slug: string;
   title: string;
+  /** Nom court affiché au-dessus de l'îlot dans le monde 3D */
+  shortTitle: string;
   teaser: string;
 };
 
 export const profile = {
   firstName: "Alix",
-  lastName: "Gruel",
-  headline: "Communication & gestion de projet | Contenus, Événementiel, IA",
-  subline: "Ex-Orange",
+  lastName: "GRUEL",
+  headline: "Communication & gestion de projet | Contenus, Événementiel, IA Ex-Orange",
+  // Ligne grise sous le titre, comme sur LinkedIn (école · entreprise)
+  organizations: ["MBway", "Orange Business"],
   location: "Lyon, Auvergne-Rhône-Alpes, France",
-  connections: 353,
+  connections: 354,
   linkedinUrl: "https://www.linkedin.com/in/alix-gruel",
   email: "alix.gruel07@gmail.com",
   photo: "/images/alix.jpg",
@@ -86,26 +89,31 @@ Je suis ouverte aux postes en communication et en gestion de projet à Lyon. N'h
 export const islands: Island[] = [
   {
     slug: "communication-interne",
+    shortTitle: "Communication interne",
     title: "Communication interne & conduite du changement",
     teaser: "Embarquer les équipes, donner du sens aux transformations.",
   },
   {
     slug: "ia-generative",
+    shortTitle: "IA générative",
     title: "IA générative appliquée à la communication",
     teaser: "Des usages concrets, responsables et utiles.",
   },
   {
     slug: "strategie-marketing",
+    shortTitle: "Marketing",
     title: "Stratégie marketing",
     teaser: "Comprendre un public, construire un message, mesurer.",
   },
   {
     slug: "creativite",
+    shortTitle: "Créativité",
     title: "Créativité & personnalité",
     teaser: "Ce qui me fait vibrer en dehors des tableaux de bord.",
   },
   {
     slug: "contact",
+    shortTitle: "Contact",
     title: "Contact",
     teaser: "On en parle autour d'un café (ou d'une visio) ?",
   },

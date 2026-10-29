@@ -22,7 +22,29 @@
   --color-abyss: #16142a;
   --color-glow: #f2b880;
 
-  --font-sans: "Inter Variable", system-ui, sans-serif;
+  /* Palette « monde des âmes » (les profondeurs) */
+  --color-soul-violet: #9a86e0;
+  --color-soul-pink: #f0b4dc;
+  --color-soul-blue: #8fb3f2;
+  --color-soul-mist: #e9dff4;
+  --color-soul-deep: #3b2f73;
+  --color-soul-cream: #f6dcb5;
+
+  /* Palette « LinkedIn » de la page surface (mêmes valeurs que linkedin.com) */
+  --color-li-blue: #0a66c2;
+  --color-li-blue-deep: #004182;
+  --color-li-blue-soft: #ebf4fd;
+  --color-li-bg: #f4f2ee;
+  --color-li-sep: #e9e5df;
+  --color-li-search: #edf3f8;
+  --color-li-text: rgba(0, 0, 0, 0.9);
+  --color-li-muted: rgba(0, 0, 0, 0.6);
+
+  /* Même pile de polices que LinkedIn : la police système de l'appareil
+     (San Francisco sur iPhone/Mac, Segoe UI sur Windows, Roboto sur Android) */
+  --font-sans: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue",
+    "Fira Sans", Ubuntu, Oxygen, "Oxygen Sans", Cantarell, "Droid Sans", "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol", "Lucida Grande", Helvetica, Arial, sans-serif;
   --font-display: "Fraunces Variable", Georgia, serif;
 }
 
@@ -31,15 +53,15 @@ html {
 }
 
 body {
-  background: var(--color-paper);
-  color: var(--color-ink);
+  background: var(--color-li-bg);
+  color: var(--color-li-text);
   font-family: var(--font-sans);
   -webkit-font-smoothing: antialiased;
 }
 
 /* Focus clavier bien visible partout */
 :focus-visible {
-  outline: 3px solid var(--color-accent);
+  outline: 3px solid var(--color-li-blue);
   outline-offset: 3px;
   border-radius: 6px;
 }
@@ -54,15 +76,36 @@ body {
     repeating-linear-gradient(35deg, rgba(160, 145, 130, 0.12) 0 1px, transparent 1px 22px);
 }
 
-/* Strates de sol sous la carte : l'indice qu'il y a « quelque chose dessous » */
+/* Sous le profil, la lumière du monde des âmes commence à filtrer */
 .strata {
   background: linear-gradient(
     to bottom,
-    var(--color-paper) 0%,
-    var(--color-soil-1) 16%,
-    var(--color-soil-2) 42%,
-    var(--color-soil-3) 70%,
-    var(--color-dusk) 100%
+    var(--color-li-bg) 0%,
+    var(--color-soul-mist) 25%,
+    var(--color-soul-pink) 60%,
+    var(--color-soul-violet) 100%
+  );
+}
+
+/* Aura qui monte doucement du bas de l'écran, par-dessus le profil */
+@keyframes aura-rise {
+  0%, 100% { transform: translateY(18%); opacity: 0.75; }
+  50% { transform: translateY(0); opacity: 1; }
+}
+.aura {
+  background:
+    radial-gradient(95% 130% at 25% 100%, rgba(240, 160, 215, 0.85), transparent 78%),
+    radial-gradient(95% 130% at 80% 100%, rgba(140, 115, 225, 0.8), transparent 78%);
+  animation: aura-rise 5s ease-in-out infinite;
+}
+
+/* Le ciel du monde des âmes, utilisé comme voile pendant la traversée */
+.soul-veil {
+  background: linear-gradient(
+    to bottom,
+    var(--color-soul-violet) 0%,
+    var(--color-soul-pink) 55%,
+    var(--color-soul-blue) 100%
   );
 }
 
@@ -81,17 +124,26 @@ body {
 }
 .firefly { animation: rise 6s ease-in infinite; }
 
-/* Transition de plongée (déclenchée par le bouton) */
+/* Traversée du profil (déclenchée par le bouton) : la page grossit vers le visiteur
+   comme si on passait à travers, pendant que le ciel du monde des âmes apparaît. */
 @keyframes dive-page {
-  to { transform: translateY(-30vh) scale(0.97); opacity: 0; filter: blur(3px); }
+  0% { transform: scale(1); opacity: 1; filter: blur(0); }
+  55% { opacity: 1; }
+  100% { transform: scale(4); opacity: 0; filter: blur(10px); }
 }
 @keyframes dive-veil {
-  from { opacity: 0; }
-  to { opacity: 1; }
+  0%, 35% { opacity: 0; }
+  100% { opacity: 1; }
 }
-.is-diving .dive-target { animation: dive-page 950ms cubic-bezier(0.65, 0, 0.35, 1) forwards; }
+.is-diving .dive-target { animation: dive-page 1200ms cubic-bezier(0.55, 0, 0.75, 0.3) forwards; }
 .dive-veil { opacity: 0; pointer-events: none; }
-.is-diving .dive-veil { animation: dive-veil 950ms ease-in forwards; }
+.is-diving .dive-veil { animation: dive-veil 1200ms ease-in forwards; }
+
+/* À l'arrivée dans le monde, le même voile se dissipe */
+@keyframes veil-out {
+  to { opacity: 0; visibility: hidden; }
+}
+.veil-out { animation: veil-out 1600ms ease-out 200ms forwards; }
 
 /* prefers-reduced-motion : on coupe toutes les animations décoratives */
 @media (prefers-reduced-motion: reduce) {

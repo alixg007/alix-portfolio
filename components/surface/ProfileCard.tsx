@@ -1,30 +1,29 @@
 import Image from "next/image";
 import { profile } from "@/content/profile";
+import ShareButton from "@/components/surface/ShareButton";
 
+/** En-tête du profil, calqué sur la version mobile de LinkedIn. */
 export default function ProfileCard() {
   const fullName = `${profile.firstName} ${profile.lastName}`;
 
   return (
-    <section
-      aria-labelledby="profil-nom"
-      className="overflow-hidden rounded-2xl border border-line bg-card shadow-[0_1px_2px_rgba(42,36,33,0.06)]"
-    >
-      {/* Bannière */}
-      <div className="banner-texture relative h-36 sm:h-52">
-        <div className="absolute inset-y-0 right-4 flex flex-col items-end justify-center text-right sm:right-10">
+    <section aria-labelledby="profil-nom" className="bg-white">
+      {/* Bannière (format 4:1, comme sur LinkedIn) */}
+      <div className="banner-texture relative aspect-[4/1] min-h-24">
+        <div className="absolute inset-y-0 right-4 flex flex-col items-end justify-center text-right sm:right-6">
           <p
             aria-hidden="true"
-            className="font-display text-xl font-bold uppercase leading-[1.05] tracking-tight text-accent sm:text-4xl"
+            className="text-[clamp(0.95rem,4.6vw,1.6rem)] font-black uppercase leading-[1.05] tracking-tight text-accent"
           >
             {profile.bannerTitle[0]}
             <br />
             {profile.bannerTitle[1]}
           </p>
-          <ul aria-hidden="true" className="mt-3 hidden gap-2 sm:flex">
+          <ul aria-hidden="true" className="mt-1.5 flex gap-1.5">
             {profile.bannerTags.map((tag) => (
               <li
                 key={tag}
-                className="rounded-full bg-card/80 px-3 py-0.5 text-[11px] font-semibold uppercase tracking-wide text-accent"
+                className="rounded-full bg-white/80 px-2 py-px text-[8px] font-bold uppercase tracking-wide text-accent sm:text-[10px]"
               >
                 {tag}
               </li>
@@ -33,60 +32,45 @@ export default function ProfileCard() {
         </div>
       </div>
 
-      <div className="relative px-5 pb-6 sm:px-8">
-        {/* Photo qui déborde sur la bannière */}
-        <div className="-mt-16 mb-3 sm:-mt-24">
+      <div className="px-4 pb-5">
+        {/* Photo qui déborde sur la bannière, partage à droite */}
+        <div className="flex items-start justify-between">
           <Image
             src={profile.photo}
             alt={`Portrait de ${fullName}`}
-            width={176}
-            height={176}
+            width={256}
+            height={256}
             priority
-            className="size-32 rounded-full border-4 border-card object-cover shadow-md sm:size-44"
+            className="relative -mt-[72px] size-32 rounded-full border-4 border-white bg-white object-cover"
           />
+          <ShareButton />
         </div>
 
-        <div className="flex flex-col gap-4 md:flex-row md:items-start md:justify-between">
-          <div className="max-w-xl">
-            <h1 id="profil-nom" className="font-display text-3xl font-semibold tracking-tight">
-              {fullName}
-            </h1>
-            <p className="mt-1 text-lg leading-snug">{profile.headline}</p>
-            <p className="text-lg leading-snug text-muted">{profile.subline}</p>
-
-            <p className="mt-2 text-sm text-muted">
-              {profile.location} ·{" "}
-              <a href={`mailto:${profile.email}`} className="font-semibold text-accent underline-offset-2 hover:underline">
-                Coordonnées
-              </a>
-            </p>
-            <p className="mt-1 text-sm font-semibold text-accent">{profile.connections} relations</p>
-          </div>
-
-          <ul className="flex flex-col gap-2 text-sm md:pt-1" aria-label="Formation">
-            {profile.education.map((edu) => (
-              <li key={edu.school} className="flex items-center gap-3">
-                <span
-                  aria-hidden="true"
-                  className="grid size-10 place-items-center rounded-md bg-accent text-[10px] font-bold text-card"
-                >
-                  {edu.school.slice(0, 5)}
-                </span>
-                <span className="font-semibold">{edu.school}</span>
-              </li>
-            ))}
-          </ul>
-        </div>
-
-        <p className="mt-4 inline-flex items-center gap-2 rounded-lg bg-accent-soft px-3 py-2 text-sm">
-          <span aria-hidden="true" className="size-2 shrink-0 rounded-full bg-moss" />
-          {profile.openTo}
+        <h1 id="profil-nom" className="mt-3 text-2xl leading-tight text-li-text">
+          {fullName}
+        </h1>
+        <p className="mt-1 text-base leading-snug text-li-text">{profile.headline}</p>
+        <p className="mt-1 text-base leading-snug text-li-muted">
+          {profile.organizations.join(" · ")}
+        </p>
+        <p className="text-base leading-snug text-li-muted">
+          {profile.location}
+          <span aria-hidden="true"> · </span>
+          <a
+            href={profile.linkedinUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="font-semibold text-li-blue hover:underline"
+          >
+            {profile.connections} relations
+            <span className="sr-only"> (ouvre mon vrai profil LinkedIn dans un nouvel onglet)</span>
+          </a>
         </p>
 
-        <div className="mt-5 flex flex-wrap gap-2">
+        <div className="mt-4 flex gap-2">
           <a
             href={`mailto:${profile.email}`}
-            className="rounded-full bg-accent px-5 py-2 font-semibold text-card transition-colors hover:bg-accent-deep"
+            className="flex-1 rounded-full bg-li-blue px-4 py-1.5 text-center text-base font-semibold text-white transition-colors hover:bg-li-blue-deep"
           >
             Me contacter
           </a>
@@ -94,16 +78,10 @@ export default function ProfileCard() {
             href={profile.linkedinUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="rounded-full border border-accent px-5 py-2 font-semibold text-accent transition-colors hover:bg-accent-soft"
+            className="flex-1 rounded-full border border-li-blue px-4 py-1.5 text-center text-base font-semibold text-li-blue transition-colors hover:bg-li-blue-soft hover:shadow-[inset_0_0_0_1px_var(--color-li-blue)]"
           >
-            Voir mon vrai profil LinkedIn
-            <span className="sr-only"> (nouvel onglet)</span>
-          </a>
-          <a
-            href="#creuser"
-            className="rounded-full border border-line px-5 py-2 font-semibold text-muted transition-colors hover:border-ink hover:text-ink"
-          >
-            Et en dessous ?
+            Vrai profil
+            <span className="sr-only"> LinkedIn (nouvel onglet)</span>
           </a>
         </div>
       </div>

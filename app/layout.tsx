@@ -1,8 +1,6 @@
 import type { Metadata, Viewport } from "next";
-// Polices auto-hébergées (aucun appel à Google, plus rapide et RGPD-friendly).
-// Inter pour le texte (lisible, proche de l'univers LinkedIn),
-// Fraunces pour les titres (chaleureux, un peu onirique).
-import "@fontsource-variable/inter";
+// Le texte utilise la police système, comme LinkedIn (voir --font-sans dans globals.css).
+// Fraunces, auto-hébergée, reste pour les titres des profondeurs (chaleureuse, un peu onirique).
 import "@fontsource-variable/fraunces";
 import "./globals.css";
 
@@ -20,16 +18,16 @@ export const metadata: Metadata = {
 };
 
 export const viewport: Viewport = {
-  themeColor: "#f5efe6",
+  themeColor: "#ffffff",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
-    <html lang="fr" className="h-full">
+    <html lang="fr" className="h-full" data-scroll-behavior="smooth">
       <body className="min-h-full">
         <a
           href="#contenu"
-          className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-50 focus:rounded-lg focus:bg-ink focus:px-4 focus:py-2 focus:text-card"
+          className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-50 focus:rounded-lg focus:bg-li-blue focus:px-4 focus:py-2 focus:text-white"
         >
           Aller au contenu
         </a>
