@@ -20,7 +20,7 @@ export default function ProfileSections() {
   return (
     <>
       <Card id="infos" title="Infos">
-        <p className="max-w-prose leading-relaxed">{profile.about}</p>
+        <p className="max-w-prose leading-relaxed whitespace-pre-line">{profile.about}</p>
       </Card>
 
       <Card id="experience" title="Expérience">

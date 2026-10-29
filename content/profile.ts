@@ -41,14 +41,22 @@ export const profile = {
 
   // TODO Alix : remplace par ton vrai texte « Infos » (3 à 5 phrases).
   about:
-    "Je fais le lien entre les personnes, les messages et les outils. Mon terrain de jeu : la communication interne, la conduite du changement et les contenus qui donnent envie d'agir. Je m'intéresse de près à l'IA générative, non pas comme un gadget, mais comme un levier concret pour mieux informer, embarquer et créer.",
+    `Fraîchement diplômée d'un MBA en Stratégie Marketing & Communication Digitale et tout juste rentrée d'un voyage en solo au Vietnam, me voilà prête à mettre ma créativité et mon sens du projet au service d'une nouvelle entreprise !
+
+Pendant deux ans en alternance chez Orange, j'ai touché à tout ce qui me plaît dans la communication interne : des vidéos, des visuels, un site vitrine refait de A à Z, des séminaires de 450 personnes et une mission de conduite du changement pour aider mon équipe à adopter l’IA.
+
+J’ai découvert que j’aimais piloter des projets autant que créer du contenu, surtout quand il y a une équipe à embarquer.
+
+🌍 Anglais C1 (TOEIC 965) | Espagnol B2 | Russe en cours (commencé à la fac, entretenu sur Duolingo depuis plus de 700 jours, la chouette et moi, c’est du sérieux !)
+
+Je suis ouverte aux postes en communication et en gestion de projet à Lyon. N'hésitez pas à m'écrire !.`,
 
   // TODO Alix : complète / corrige dates et intitulés.
   experiences: [
     {
       role: "Chargée de communication interne (alternance)",
       org: "Orange",
-      period: "À compléter",
+      period: "2024-2026",
       place: "Lyon",
       summary:
         "Accompagnement de projets de transformation : contenus éditoriaux, animation d'événements internes et appui à la conduite du changement.",
@@ -58,8 +66,8 @@ export const profile = {
   education: [
     {
       school: "MBway",
-      degree: "Mastère communication & stratégie (à préciser)",
-      period: "À compléter",
+      degree: "MBA Stratégies Marketing et Communication digitale",
+      period: "2024-2026",
     },
   ] satisfies Education[],
 
