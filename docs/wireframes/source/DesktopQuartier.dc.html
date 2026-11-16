@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<title>Quartier ouvert, desktop</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&amp;family=JetBrains+Mono:wght@500&amp;display=swap">
+<style>
+body{margin:0}
+a{color:#1d1d1f}a:hover{color:#c8372d}
+.ill{background:repeating-linear-gradient(45deg,#ececec 0 12px,#f7f7f7 12px 24px);display:flex;justify-content:center;text-align:center;font-family:'JetBrains Mono',monospace;font-size:13px;color:#4a4a4a;box-sizing:border-box}
+.dot{position:absolute;width:36px;height:36px;border-radius:50%;background:#c8372d;color:#fff;font-weight:700;font-size:15px;display:flex;align-items:center;justify-content:center;border:2px solid #fff;box-shadow:0 0 0 1.5px #c8372d}
+.navl{background:#fff;border:1.5px solid #1d1d1f;border-radius:6px;padding:6px 10px;font-family:'JetBrains Mono',monospace;font-size:12px;text-transform:uppercase;letter-spacing:.05em;text-decoration:none}
+.lbl{margin:0;font-family:'JetBrains Mono',monospace;font-size:11px;text-transform:uppercase;letter-spacing:.08em;color:#5c5c5c}
+.case{border:1.5px solid #bdbdbd;border-radius:14px;background:#fff;padding:20px;display:flex;flex-direction:column;gap:10px}
+.row{display:grid;grid-template-columns:100px minmax(0,1fr);gap:10px;font-size:14px;line-height:1.45}
+</style>
+</helmet>
+<div style="width:1440px;height:1100px;box-sizing:border-box;font-family:Inter,system-ui,sans-serif;color:#1d1d1f;display:flex;flex-direction:column;background:#f4f4f2">
+  <header style="height:88px;flex-shrink:0;display:flex;align-items:center;justify-content:space-between;padding:0 32px;border-bottom:1.5px solid #d0d0d0;background:#fff">
+    <div style="display:flex;align-items:center;gap:16px">
+      <a href="DesktopAccueil.dc.html" style="width:48px;height:48px;border-radius:12px;background:#1d1d1f;color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;text-decoration:none">AG</a>
+      <a href="DesktopAccueil.dc.html" style="font-size:14px;font-weight:600;text-decoration:none">← Le monde</a>
+    </div>
+    <nav aria-label="Quartiers" style="display:flex;gap:8px">
+      <a href="#" class="navl">Les coulisses</a>
+      <a href="#" class="navl">L'IA, avec une âme</a>
+      <a href="#" class="navl" aria-current="page" style="background:#1d1d1f;color:#fff">Mener la barque</a>
+      <a href="#" class="navl">Chez moi</a>
+      <a href="#" class="navl" style="background:#c8372d;color:#fff;border-color:#c8372d">Me contacter</a>
+    </nav>
+  </header>
+  <div style="flex:1;display:grid;grid-template-columns:minmax(0,58fr) minmax(0,42fr);min-height:0">
+    <div class="ill" style="position:relative;padding-top:60px;border-right:1.5px dashed #8e8e8e">ZOOM DANS LA SCÈNE GLOBALE<br>la rivière, la barque pilotée par Alix<br>Lyon et Marseille reliées au loin · quai avec vélo cargo et casiers
+      <div class="dot" style="top:300px;left:180px">1</div>
+      <div class="dot" style="top:420px;left:520px">2</div>
+      <div class="dot" style="top:640px;left:300px">3</div>
+      <span style="position:absolute;left:24px;bottom:24px;font-family:'JetBrains Mono',monospace;font-size:11px;text-transform:uppercase;letter-spacing:.06em;color:#fff;background:#c8372d;border-radius:4px;padding:4px 8px">Le décor bouge légèrement avec la souris</span>
+    </div>
+    <div style="padding:32px;display:flex;flex-direction:column;gap:18px;overflow:hidden;min-width:0">
+      <p class="lbl">Quartier 3 / 4</p>
+      <p style="margin:0;font-size:40px;font-weight:700;line-height:1.05">Mener la barque</p>
+      <p style="margin:0;font-size:16px;line-height:1.5;max-width:52ch">Gestion de projet et autonomie. Peu d'années d'expérience, mais l'habitude de tenir le cap.</p>
+      <div class="case" style="border-color:#1d1d1f">
+        <p class="lbl">① Alternance à distance</p>
+        <p style="margin:0;font-size:18px;font-weight:700">Deux ans seule à Lyon, mon équipe à Marseille</p>
+        <p style="margin:0;font-size:14px;line-height:1.45">Arrivée sans expérience en communication, j'ai porté les sujets de com du site lyonnais en autonomie.</p>
+      </div>
+      <div class="case">
+        <p class="lbl">② Projet de master</p>
+        <p style="margin:0;font-size:18px;font-weight:700">Keeply'on, une start-up construite de A à Z</p>
+        <div class="row"><b>Contexte</b><span>Laverie connectée dans les salles de sport, en équipe de 4, pendant 6 mois.</span></div>
+        <div class="row"><b>Mon rôle</b><span>BizDev (contenus, partenaires) et coordination de l'équipe.</span></div>
+        <div class="row"><b>Résultat</b><span>14e sur une cinquantaine d'équipes, devant un jury d'entrepreneurs.</span></div>
+        <a href="#" style="font-size:14px;font-weight:600">Voir le pitch →</a>
+      </div>
+      <figure style="margin:0;border-left:3px solid #1d1d1f;padding-left:14px;display:flex;flex-direction:column;gap:4px">
+        <blockquote style="margin:0;font-size:15px;line-height:1.5">« … le plaisir de travailler ensemble au quotidien, même à distance ! »</blockquote>
+        <figcaption style="font-size:12px;color:#5c5c5c">Ma tutrice d'alternance · recommandation LinkedIn</figcaption>
+      </figure>
+    </div>
+  </div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":1100}}'>
+class Component extends DCLogic {
+  renderVals() { return {}; }
+}
+</script>
+</body>
+</html>

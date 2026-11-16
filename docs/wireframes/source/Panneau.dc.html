@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<title>Panneau projet ouvert, mobile</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&amp;family=JetBrains+Mono:wght@500&amp;display=swap">
+<style>
+body{margin:0}
+a{color:#1d1d1f}a:hover{color:#c8372d}
+.ill{background:repeating-linear-gradient(45deg,#d9d9d9 0 10px,#e6e6e6 10px 20px);display:flex;justify-content:center;text-align:center;font-family:'JetBrains Mono',monospace;font-size:11px;color:#4a4a4a;padding:24px 12px;box-sizing:border-box}
+.lbl{margin:0;font-family:'JetBrains Mono',monospace;font-size:10px;text-transform:uppercase;letter-spacing:.08em;color:#5c5c5c}
+.step{display:grid;grid-template-columns:30px minmax(0,1fr);gap:10px;align-items:start}
+.num{width:30px;height:30px;border-radius:8px;background:#1d1d1f;color:#fff;font-weight:700;display:flex;align-items:center;justify-content:center;font-size:13px}
+</style>
+</helmet>
+<div style="width:390px;height:844px;box-sizing:border-box;font-family:Inter,system-ui,sans-serif;color:#1d1d1f;position:relative;overflow:hidden">
+  <div class="ill" style="position:absolute;inset:0">Décor du quartier « L'IA, avec une âme »<br>assombri en arrière-plan</div>
+  <div style="position:absolute;inset:0;background:rgba(29,29,31,.45)"></div>
+  <div role="dialog" aria-label="Mémoire" style="position:absolute;left:0;right:0;bottom:0;height:700px;background:#fff;border-radius:20px 20px 0 0;border-top:1.5px solid #1d1d1f;display:flex;flex-direction:column">
+    <div style="display:flex;justify-content:center;padding-top:10px"><div style="width:44px;height:5px;border-radius:3px;background:#bdbdbd"></div></div>
+    <div style="display:flex;align-items:center;justify-content:space-between;padding:8px 16px 0">
+      <p class="lbl">Projet · L'IA, avec une âme</p>
+      <button type="button" aria-label="Fermer" style="width:44px;height:44px;border-radius:50%;border:1.5px solid #1d1d1f;background:#fff;font-size:18px;cursor:pointer">×</button>
+    </div>
+    <div style="padding:8px 16px 16px;display:flex;flex-direction:column;gap:14px;overflow:hidden">
+      <p style="margin:0;font-size:21px;font-weight:700;line-height:1.2">Mon mémoire : structurer les usages de l'IA générative en communication interne</p>
+      <div style="background:#f4f4f2;border-radius:10px;padding:12px;font-size:13px;line-height:1.45"><b>La question :</b> comment passer d'un usage spontané de l'IA à un levier piloté et stratégique pour une équipe de communication ?</div>
+      <p class="lbl">Mes 3 préconisations</p>
+      <div class="step"><div class="num">A</div><div><p style="margin:0;font-weight:700;font-size:14px">Sécuriser les usages</p><p style="margin:2px 0 0;font-size:12px;color:#4a4a4a">Protocole d'usage de l'équipe, architecture des outils</p></div></div>
+      <div class="step"><div class="num">B</div><div><p style="margin:0;font-weight:700;font-size:14px">Développer les compétences</p><p style="margin:2px 0 0;font-size:12px;color:#4a4a4a">Bibliothèque de prompts partagée, formation sur cas réels</p></div></div>
+      <div class="step"><div class="num">C</div><div><p style="margin:0;font-weight:700;font-size:14px">Ancrer les usages</p><p style="margin:2px 0 0;font-size:12px;color:#4a4a4a">Rituel mensuel IA, reporting semestriel</p></div></div>
+      <div style="border-left:3px solid #1d1d1f;padding-left:10px;font-size:13px;line-height:1.45">Remis à ma directrice et à ma responsable communication, qui m'ont chaleureusement remerciée.</div>
+      <p style="margin:0;font-size:11px;color:#5c5c5c">Démarche présentée sans données confidentielles.</p>
+      <div style="display:flex;gap:8px">
+        <a href="Accueil.dc.html" style="flex:1;text-align:center;border:1.5px solid #1d1d1f;border-radius:99px;padding:11px;font-size:14px;font-weight:600;text-decoration:none">Retour au décor</a>
+        <a href="#" style="flex:1;text-align:center;background:#1d1d1f;color:#fff;border-radius:99px;padding:11px;font-size:14px;font-weight:600;text-decoration:none">Projet suivant →</a>
+      </div>
+    </div>
+  </div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":390,"height":844}}'>
+class Component extends DCLogic {
+  renderVals() { return {}; }
+}
+</script>
+</body>
+</html>

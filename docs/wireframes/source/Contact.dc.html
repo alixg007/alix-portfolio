@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<title>Contact, mobile</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&amp;family=JetBrains+Mono:wght@500&amp;display=swap">
+<style>
+body{margin:0}
+a{color:#1d1d1f}a:hover{color:#c8372d}
+.ill{background:repeating-linear-gradient(45deg,#ececec 0 10px,#f7f7f7 10px 20px);border:1.5px dashed #8e8e8e;display:flex;align-items:center;justify-content:center;text-align:center;font-family:'JetBrains Mono',monospace;font-size:11px;color:#4a4a4a;padding:12px;box-sizing:border-box}
+.lbl{margin:0;font-family:'JetBrains Mono',monospace;font-size:10px;text-transform:uppercase;letter-spacing:.08em;color:#5c5c5c}
+.chip{border:1.5px solid #bdbdbd;border-radius:99px;padding:4px 10px;font-size:12px;background:#fff}
+.btn{display:flex;align-items:center;justify-content:center;gap:8px;border:1.5px solid #1d1d1f;border-radius:99px;padding:12px;font-size:14px;font-weight:600;text-decoration:none;background:#fff}
+</style>
+</helmet>
+<div style="width:390px;height:1250px;box-sizing:border-box;background:#f4f4f2;font-family:Inter,system-ui,sans-serif;color:#1d1d1f;display:flex;flex-direction:column">
+  <div style="height:56px;background:#fff;border-bottom:1.5px solid #d0d0d0;display:flex;align-items:center;padding:0 12px">
+    <a href="Accueil.dc.html" style="text-decoration:none;font-size:13px;font-weight:600;min-height:44px;display:flex;align-items:center">← Le monde</a>
+  </div>
+  <div class="ill" style="height:260px;border-left:none;border-right:none;border-top:none">FIN DU VOYAGE<br>le guide Alix, sur le pas de sa porte, fait signe<br>(mimique : clin d'œil complice)</div>
+  <div style="padding:20px 16px;display:flex;flex-direction:column;gap:16px">
+    <p style="margin:0;font-size:28px;font-weight:700;line-height:1.1">On se rencontre ?</p>
+    <p style="margin:0;font-size:14px;line-height:1.5">Vous avez fait le tour du propriétaire. Pour parler d'un poste, d'un projet ou d'un album des Beatles, écrivez-moi.</p>
+    <div style="background:#fff;border:1.5px solid #1d1d1f;border-radius:14px;padding:14px;display:flex;flex-direction:column;gap:10px">
+      <p class="lbl">E-mail</p>
+      <div style="display:flex;gap:8px;align-items:center;flex-wrap:wrap">
+        <span style="font-size:16px;font-weight:600;flex:1;min-width:0;user-select:all">alix.gruel07@gmail.com</span>
+        <button type="button" style="border:none;background:#1d1d1f;color:#fff;border-radius:99px;padding:10px 14px;font-size:13px;font-weight:600;min-height:44px;cursor:pointer">Copier</button>
+      </div>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px">
+      <a href="#" class="btn">LinkedIn ↗</a>
+      <a href="#" class="btn">Mon CV (PDF)</a>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:8px">
+      <p class="lbl">Disponible à Lyon et en région lyonnaise, pour :</p>
+      <div style="display:flex;flex-wrap:wrap;gap:6px"><span class="chip">Chargée de communication</span><span class="chip">Communication digitale</span><span class="chip">Chargée de projet / PMO</span><span class="chip">Événementiel</span><span class="chip">Marque employeur</span></div>
+    </div>
+    <figure style="margin:0;background:#fff;border:1.5px solid #bdbdbd;border-radius:14px;padding:16px;display:flex;flex-direction:column;gap:8px">
+      <p class="lbl">Ils en parlent mieux que moi</p>
+      <blockquote style="margin:0;font-size:14px;line-height:1.5">« Sérieuse, rigoureuse et investie, elle s'est distinguée par sa capacité d'adaptation, son sens du collectif et ses qualités relationnelles. »</blockquote>
+      <figcaption style="font-size:12px;color:#5c5c5c">Ma tutrice d'alternance, Orange Business · recommandation LinkedIn</figcaption>
+    </figure>
+  </div>
+  <footer style="margin-top:auto;background:#1d1d1f;color:#fff;padding:20px 16px;display:flex;flex-direction:column;gap:10px">
+    <a href="Main.dc.html" style="color:#fff;font-weight:600;font-size:14px;text-decoration:none">↑ Remonter à la surface</a>
+    <p style="margin:0;font-size:12px;line-height:1.5;color:#d6d6d6">Ce site a été imaginé par moi, dessiné avec Claude Design et codé avec Claude Code. [Lien vers le quartier IA pour l'histoire de sa fabrication]</p>
+  </footer>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":390,"height":1250}}'>
+class Component extends DCLogic {
+  renderVals() { return {}; }
+}
+</script>
+</body>
+</html>

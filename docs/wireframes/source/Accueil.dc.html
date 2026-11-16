@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<title>Accueil du monde, mobile</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&amp;family=JetBrains+Mono:wght@500&amp;display=swap">
+<style>
+body{margin:0}
+a{color:#1d1d1f}a:hover{color:#c8372d}
+.ill{background:repeating-linear-gradient(45deg,#ececec 0 10px,#f7f7f7 10px 20px);border:1.5px dashed #8e8e8e;display:flex;align-items:center;justify-content:center;text-align:center;font-family:'JetBrains Mono',monospace;font-size:11px;color:#4a4a4a;padding:12px;box-sizing:border-box}
+.pin{position:absolute;background:#fff;border:1.5px solid #1d1d1f;border-radius:8px;padding:6px 8px;font-size:11px;font-weight:600;display:flex;flex-direction:column;gap:2px;box-shadow:2px 2px 0 #1d1d1f;text-decoration:none}
+.pin span{font-family:'JetBrains Mono',monospace;font-weight:500;font-size:9px;color:#5c5c5c;text-transform:uppercase;letter-spacing:.05em}
+.tag{font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.06em;text-transform:uppercase;color:#fff;background:#c8372d;border-radius:4px;padding:3px 6px}
+.card{border:1.5px solid #bdbdbd;border-radius:12px;background:#fff;padding:14px;display:flex;gap:12px;align-items:flex-start;text-decoration:none;color:#1d1d1f}
+.ico{width:40px;height:40px;border-radius:10px;border:1.5px solid #1d1d1f;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.nav{display:flex;justify-content:space-around;align-items:center;background:#fff;border-top:1.5px solid #1d1d1f;height:72px;font-size:10px;font-weight:600}
+.nav a{display:flex;flex-direction:column;align-items:center;gap:4px;text-decoration:none;min-width:56px;min-height:44px;justify-content:center}
+</style>
+</helmet>
+<div style="width:390px;height:2050px;box-sizing:border-box;background:#f4f4f2;font-family:Inter,system-ui,sans-serif;color:#1d1d1f;position:relative;display:flex;flex-direction:column">
+  <div class="ill" style="height:110px;border-left:none;border-right:none">TRANSITION<br>les strates défilent, la page LinkedIn s'efface</div>
+  <div class="ill" style="height:1000px;border-left:none;border-right:none;border-top:none;position:relative;align-items:flex-start;padding-top:20px">SCÈNE GLOBALE (recomposée à la verticale)<br>ville empilée · objets géants · créatures · rivière
+    <a href="Quartier.dc.html" class="pin" style="top:70px;left:20px">Les coulisses<span>caméra géante</span></a>
+    <a href="#" class="pin" style="top:150px;right:18px">L'IA, avec une âme<span>téléphone-bâtiment</span></a>
+    <div style="position:absolute;left:16px;right:16px;top:250px;background:#fff;border:2px solid #1d1d1f;border-radius:14px;padding:16px;display:flex;flex-direction:column;gap:9px;text-align:left;font-family:Inter,system-ui,sans-serif;color:#1d1d1f;box-shadow:4px 4px 0 #1d1d1f">
+      <span class="tag" style="position:absolute;top:-12px;right:12px">① Présentation · visible sans défiler</span>
+      <span style="align-self:flex-start;background:#e3f1e6;border:1.5px solid #3f6b54;color:#25432f;border-radius:99px;padding:4px 10px;font-size:12px;font-weight:600">● Disponible · Lyon et région lyonnaise</span>
+      <p style="margin:0;font-size:24px;font-weight:700;line-height:1.15">Bonjour, je suis Alix.</p>
+      <p style="margin:0;font-size:14px;line-height:1.5">Communication et gestion de projet : contenus, événementiel et IA générative. Ici, je vous montre comment je travaille et qui je suis.</p>
+      <div style="display:flex;gap:8px;flex-wrap:wrap">
+        <a href="#plan" style="background:#1d1d1f;color:#fff;border-radius:99px;padding:11px 16px;font-size:14px;font-weight:600;text-decoration:none">Voir le plan ↓</a>
+        <a href="Contact.dc.html" style="border:1.5px solid #1d1d1f;border-radius:99px;padding:10px 16px;font-size:14px;font-weight:600;text-decoration:none">Me contacter</a>
+      </div>
+    </div>
+    <div class="pin" style="top:640px;left:150px;border-style:dashed;box-shadow:none">Guide Alix<span>sur une échelle, lampe à la main</span></div>
+    <a href="Barque.dc.html" class="pin" style="top:740px;left:24px">Mener la barque<span>rivière + barque</span></a>
+    <a href="ChezMoi.dc.html" class="pin" style="top:860px;right:24px">Chez moi<span>tourne-disque sur le toit</span></a>
+    <span class="tag" style="position:absolute;bottom:14px;left:14px">Toucher un quartier = zoom</span>
+  </div>
+  <div style="padding:20px 16px;display:flex;flex-direction:column;gap:14px">
+    <div id="plan" style="display:flex;align-items:center;justify-content:space-between;gap:8px">
+      <p style="margin:0;font-family:'JetBrains Mono',monospace;font-size:11px;text-transform:uppercase;letter-spacing:.08em;color:#5c5c5c">Le plan du monde · 4 quartiers</p>
+      <span class="tag">② Plan du site</span>
+    </div>
+    <a href="Quartier.dc.html" class="card"><div class="ico"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1d1d1f" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="7" width="13" height="10" rx="2"/><path d="m16 11 5-3v8l-5-3"/></svg></div><div style="display:flex;flex-direction:column;gap:3px"><p style="margin:0;font-weight:700;font-size:15px">Les coulisses</p><p style="margin:0;font-size:12px;color:#5c5c5c">Vidéo, événementiel, relationnel</p><p style="margin:0;font-size:12px">Preuve phare : vidéo Club DRH · Filme ton job (20/20)</p></div></a>
+    <a href="#" class="card"><div class="ico"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1d1d1f" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="7" y="2" width="10" height="20" rx="2"/><path d="M11 18h2"/></svg></div><div style="display:flex;flex-direction:column;gap:3px"><p style="margin:0;font-weight:700;font-size:15px">L'IA, avec une âme</p><p style="margin:0;font-size:12px;color:#5c5c5c">Communication interne, IA générative</p><p style="margin:0;font-size:12px">Preuve phare : mon mémoire · ce site</p></div></a>
+    <a href="Barque.dc.html" class="card"><div class="ico"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1d1d1f" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 15h18l-3 4H6z"/><path d="M12 15V4l6 8h-6"/></svg></div><div style="display:flex;flex-direction:column;gap:3px"><p style="margin:0;font-weight:700;font-size:15px">Mener la barque</p><p style="margin:0;font-size:12px;color:#5c5c5c">Gestion de projet, autonomie</p><p style="margin:0;font-size:12px">Preuve phare : 2 ans à distance · Keeply'on</p></div></a>
+    <a href="ChezMoi.dc.html" class="card"><div class="ico"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1d1d1f" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="2.5"/></svg></div><div style="display:flex;flex-direction:column;gap:3px"><p style="margin:0;font-weight:700;font-size:15px">Chez moi</p><p style="margin:0;font-size:12px;color:#5c5c5c">Personnalité, atomes crochus</p><p style="margin:0;font-size:12px">Playlist, films, Rummikub, Vietnam</p></div></a>
+    <div style="border:1.5px dashed #1d1d1f;border-radius:12px;padding:14px;display:flex;flex-direction:column;gap:6px">
+      <p style="margin:0;font-family:'JetBrains Mono',monospace;font-size:11px;text-transform:uppercase;letter-spacing:.08em">En ce moment</p>
+      <p style="margin:0;font-size:13px">♪ J'écoute <em>Coming Up</em>, Paul McCartney</p>
+      <p style="margin:0;font-size:13px">⌕ Je cherche un poste en communication à Lyon</p>
+      <p style="margin:0;font-size:13px">✎ Je construis ce site avec Claude Code</p>
+    </div>
+  </div>
+  <div style="position:absolute;left:0;right:0;top:772px">
+    <div style="border-top:2px dashed #c8372d;position:relative"><span class="tag" style="position:absolute;left:8px;top:-22px">Fin du 1er écran</span><span class="tag" style="position:absolute;right:8px;top:-22px">③ Barre fixe = plan toujours à portée</span></div>
+    <nav class="nav" aria-label="Quartiers">
+      <a href="Quartier.dc.html"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1d1d1f" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="7" width="13" height="10" rx="2"/><path d="m16 11 5-3v8l-5-3"/></svg>Coulisses</a>
+      <a href="#"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1d1d1f" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="7" y="2" width="10" height="20" rx="2"/><path d="M11 18h2"/></svg>IA</a>
+      <a href="Barque.dc.html"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1d1d1f" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 15h18l-3 4H6z"/><path d="M12 15V4l6 8h-6"/></svg>Barque</a>
+      <a href="ChezMoi.dc.html"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1d1d1f" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="2.5"/></svg>Chez moi</a>
+      <a href="Contact.dc.html" style="background:#c8372d;color:#fff;border-radius:12px;padding:4px 8px"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>Contact</a>
+    </nav>
+  </div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":390,"height":2050}}'>
+class Component extends DCLogic {
+  renderVals() { return {}; }
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<title>Quartier Chez moi, mobile</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&amp;family=JetBrains+Mono:wght@500&amp;display=swap">
+<style>
+body{margin:0}
+a{color:#1d1d1f}a:hover{color:#c8372d}
+.ill{background:repeating-linear-gradient(45deg,#ececec 0 10px,#f7f7f7 10px 20px);border:1.5px dashed #8e8e8e;display:flex;align-items:center;justify-content:center;text-align:center;font-family:'JetBrains Mono',monospace;font-size:11px;color:#4a4a4a;padding:12px;box-sizing:border-box}
+.hot{position:absolute;background:#fff;border:1.5px solid #c8372d;color:#c8372d;border-radius:99px;padding:5px 9px;font-size:11px;font-weight:700}
+.tag{font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.06em;text-transform:uppercase;color:#fff;background:#c8372d;border-radius:4px;padding:3px 6px}
+.lbl{margin:0;font-family:'JetBrains Mono',monospace;font-size:10px;text-transform:uppercase;letter-spacing:.08em;color:#5c5c5c}
+.box{border:1.5px solid #bdbdbd;border-radius:12px;background:#fff;padding:16px;display:flex;flex-direction:column;gap:10px}
+.chip{border:1.5px solid #bdbdbd;border-radius:99px;padding:4px 10px;font-size:12px}
+.obj{display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid #d6d6d6;padding:10px 0;font-size:14px;text-decoration:none;min-height:24px}
+.nav{display:flex;justify-content:space-around;align-items:center;background:#fff;border-top:1.5px solid #1d1d1f;height:72px;font-size:10px;font-weight:600}
+.nav a{display:flex;flex-direction:column;align-items:center;gap:4px;text-decoration:none;min-width:56px;min-height:44px;justify-content:center}
+</style>
+</helmet>
+<div style="width:390px;height:1750px;box-sizing:border-box;background:#f4f4f2;font-family:Inter,system-ui,sans-serif;color:#1d1d1f;position:relative;display:flex;flex-direction:column">
+  <div style="height:56px;background:#fff;border-bottom:1.5px solid #d0d0d0;display:flex;align-items:center;gap:10px;padding:0 12px">
+    <a href="Accueil.dc.html" style="text-decoration:none;font-size:13px;font-weight:600;min-height:44px;display:flex;align-items:center">← Le monde</a>
+    <div style="flex:1"></div>
+    <span class="lbl">Quartier 4 / 4</span>
+  </div>
+  <div class="ill" style="height:520px;border-left:none;border-right:none;border-top:none;position:relative;align-items:flex-start;padding-top:20px">MA MAISON OUVERTE COMME UNE MAISON DE POUPÉE<br>lumière chaude de lampes et bougies · plantes qui débordent
+    <div class="hot" style="top:70px;right:30px">♪ Tourne-disque</div>
+    <div class="hot" style="top:150px;left:20px">Vidéoprojecteur</div>
+    <div class="hot" style="top:230px;right:40px">Plantes</div>
+    <div class="hot" style="top:300px;left:40px">Valise du Vietnam</div>
+    <div class="hot" style="top:380px;right:20px">Fenêtre sur Bourg-en-Bresse</div>
+    <span class="tag" style="position:absolute;bottom:14px;left:14px">Touchez un objet</span>
+  </div>
+  <div style="padding:20px 16px;display:flex;flex-direction:column;gap:16px">
+    <div style="display:flex;flex-direction:column;gap:6px">
+      <p style="margin:0;font-size:26px;font-weight:700">Chez moi</p>
+      <p style="margin:0;font-size:14px;line-height:1.5">Vingt mètres carrés au centre de Lyon, des petites lumières, beaucoup de musique. Entrez, on a peut-être des goûts en commun.</p>
+    </div>
+    <div class="box" style="border-color:#1d1d1f">
+      <p class="lbl">Objet ouvert · le vidéoprojecteur</p>
+      <p style="margin:0;font-size:17px;font-weight:700">Mes films préférés</p>
+      <div style="display:flex;flex-wrap:wrap;gap:6px"><span class="chip">Le Pianiste</span><span class="chip">La Ligne verte</span><span class="chip">Interstellar</span><span class="chip">Stand by Me</span><span class="chip">Parasite</span><span class="chip">Rain Man</span><span class="chip">+ 8 autres</span></div>
+    </div>
+    <div class="box">
+      <p class="lbl">Le tourne-disque · ma playlist</p>
+      <div class="ill" style="height:150px;border-radius:8px">LECTEUR SPOTIFY OFFICIEL<br>playlist créée pour le site<br>ne démarre qu'au clic</div>
+      <p style="margin:0;font-size:12px;color:#4a4a4a">Coming Up, Paul McCartney · I Love the Nightlife, Alicia Bridges · Celebrate the World, Womack &amp; Womack · [suite de la playlist]</p>
+    </div>
+    <div class="box" style="gap:0">
+      <p class="lbl" style="margin-bottom:6px">Tous les objets de la pièce</p>
+      <a href="#" class="obj"><span>Le tourne-disque · ma musique</span><span>→</span></a>
+      <a href="#" class="obj"><span>Le vidéoprojecteur · mes films</span><span>→</span></a>
+      <a href="#" class="obj"><span>Les plantes · mes rituels du soir</span><span>→</span></a>
+      <a href="#" class="obj"><span>La valise · seule au Vietnam</span><span>→</span></a>
+      <a href="#" class="obj" style="border-bottom:none"><span>La fenêtre · Rummikub chez mes grands-parents</span><span>→</span></a>
+    </div>
+    <a href="Contact.dc.html" style="background:#1d1d1f;color:#fff;border-radius:14px;padding:16px;text-decoration:none;display:flex;flex-direction:column;gap:4px"><span style="font-weight:700;font-size:15px">Un film ou un album en commun ?</span><span style="font-size:13px">Écrivez-moi, on en parlera en entretien →</span></a>
+  </div>
+  <div style="position:absolute;left:0;right:0;top:772px">
+    <nav class="nav" aria-label="Quartiers">
+      <a href="Quartier.dc.html"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1d1d1f" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="7" width="13" height="10" rx="2"/><path d="m16 11 5-3v8l-5-3"/></svg>Coulisses</a>
+      <a href="#"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1d1d1f" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="7" y="2" width="10" height="20" rx="2"/><path d="M11 18h2"/></svg>IA</a>
+      <a href="#"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1d1d1f" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 15h18l-3 4H6z"/><path d="M12 15V4l6 8h-6"/></svg>Barque</a>
+      <a href="ChezMoi.dc.html" aria-current="page" style="color:#c8372d"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#c8372d" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="2.5"/></svg>Chez moi</a>
+      <a href="Contact.dc.html" style="background:#c8372d;color:#fff;border-radius:12px;padding:4px 8px"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>Contact</a>
+    </nav>
+  </div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":390,"height":1750}}'>
+class Component extends DCLogic {
+  renderVals() { return {}; }
+}
+</script>
+</body>
+</html>

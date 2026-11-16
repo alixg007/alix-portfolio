@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<title>Accueil du monde, desktop</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&amp;family=JetBrains+Mono:wght@500&amp;display=swap">
+<style>
+body{margin:0}
+a{color:#1d1d1f}a:hover{color:#c8372d}
+.ill{background:repeating-linear-gradient(45deg,#ececec 0 12px,#f7f7f7 12px 24px);display:flex;justify-content:center;text-align:center;font-family:'JetBrains Mono',monospace;font-size:13px;color:#4a4a4a;box-sizing:border-box}
+.pin{position:absolute;background:#fff;border:1.5px solid #1d1d1f;border-radius:10px;padding:8px 12px;font-size:14px;font-weight:700;display:flex;flex-direction:column;gap:2px;box-shadow:3px 3px 0 #1d1d1f;text-decoration:none}
+.pin span{font-family:'JetBrains Mono',monospace;font-weight:500;font-size:10px;color:#5c5c5c;text-transform:uppercase;letter-spacing:.05em}
+.navl{background:#fff;border:1.5px solid #1d1d1f;border-radius:6px;padding:6px 10px;font-family:'JetBrains Mono',monospace;font-size:12px;text-transform:uppercase;letter-spacing:.05em;text-decoration:none}
+.tag{font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:#fff;background:#c8372d;border-radius:4px;padding:4px 8px}
+</style>
+</helmet>
+<div style="width:1440px;height:1100px;box-sizing:border-box;font-family:Inter,system-ui,sans-serif;color:#1d1d1f;position:relative;overflow:hidden;background:#f4f4f2">
+  <div class="ill" style="position:absolute;inset:0 0 64px 0;padding-top:120px;border-bottom:1.5px dashed #8e8e8e">SCÈNE GLOBALE EN PLEINE LARGEUR (1440 × 900 et plus)<br>ville empilée, objets géants, créatures, rivière qui traverse tout<br>plans en parallaxe au mouvement de la souris et au défilement</div>
+  <header style="position:absolute;top:24px;left:32px;right:32px;display:flex;align-items:center;justify-content:space-between">
+    <a href="Main.dc.html" style="width:48px;height:48px;border-radius:12px;background:#1d1d1f;color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;text-decoration:none">AG</a>
+    <nav aria-label="Quartiers" style="display:flex;gap:8px;align-items:center">
+      <a href="DesktopQuartier.dc.html" class="navl">Les coulisses</a>
+      <a href="#" class="navl">L'IA, avec une âme</a>
+      <a href="DesktopQuartier.dc.html" class="navl">Mener la barque</a>
+      <a href="#" class="navl">Chez moi</a>
+      <a href="#" class="navl" style="background:#c8372d;color:#fff;border-color:#c8372d">Me contacter</a>
+    </nav>
+  </header>
+  <a href="#" class="pin" style="top:250px;left:180px">Les coulisses<span>caméra géante</span></a>
+  <a href="#" class="pin" style="top:200px;left:820px">L'IA, avec une âme<span>téléphone-bâtiment</span></a>
+  <a href="DesktopQuartier.dc.html" class="pin" style="top:560px;left:1000px">Mener la barque<span>rivière + barque</span></a>
+  <a href="#" class="pin" style="top:430px;left:1180px">Chez moi<span>tourne-disque sur le toit</span></a>
+  <div class="pin" style="top:640px;left:640px;border-style:dashed;box-shadow:none">Guide Alix<span>au premier plan, bouge au défilement</span></div>
+  <div style="position:absolute;left:32px;bottom:104px;width:460px;background:#fff;border:1.5px solid #1d1d1f;border-radius:16px;padding:24px;display:flex;flex-direction:column;gap:12px">
+    <span style="align-self:flex-start;background:#e3f1e6;border:1.5px solid #3f6b54;color:#25432f;border-radius:99px;padding:4px 10px;font-size:13px;font-weight:600">● Disponible · Lyon et région lyonnaise</span>
+    <p style="margin:0;font-size:36px;font-weight:700;line-height:1.1">Bonjour, je suis Alix.</p>
+    <p style="margin:0;font-size:16px;line-height:1.5">Communication et gestion de projet : contenus, événementiel et IA générative. Ici, je vous montre comment je travaille et qui je suis.</p>
+    <div style="display:flex;gap:10px">
+      <a href="#" style="background:#1d1d1f;color:#fff;border-radius:99px;padding:12px 20px;font-size:15px;font-weight:600;text-decoration:none">Explorer le monde</a>
+      <a href="#" style="border:1.5px solid #1d1d1f;border-radius:99px;padding:11px 20px;font-size:15px;font-weight:600;text-decoration:none">Me contacter</a>
+    </div>
+  </div>
+  <span class="tag" style="position:absolute;right:32px;bottom:104px">Survoler un quartier = il s'anime · cliquer = zoom</span>
+  <div style="position:absolute;left:0;right:0;bottom:0;height:64px;background:#1d1d1f;color:#fff;display:flex;align-items:center;gap:32px;padding:0 32px;font-size:14px">
+    <span style="font-family:'JetBrains Mono',monospace;font-size:11px;text-transform:uppercase;letter-spacing:.08em;color:#bdbdbd">En ce moment</span>
+    <span>♪ J'écoute <em>Coming Up</em>, Paul McCartney</span>
+    <span>⌕ Je cherche un poste en communication à Lyon</span>
+    <span>✎ Je construis ce site avec Claude Code</span>
+  </div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":1100}}'>
+class Component extends DCLogic {
+  renderVals() { return {}; }
+}
+</script>
+</body>
+</html>
