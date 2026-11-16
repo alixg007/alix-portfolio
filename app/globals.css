@@ -22,7 +22,18 @@
   --color-abyss: #16142a;
   --color-glow: #f2b880;
 
-  /* Palette « monde des âmes » (les profondeurs) */
+  /* Palette provisoire du monde illustré : celle des wireframes,
+     en attendant l'identité visuelle définitive */
+  --color-w-ink: #1d1d1f;
+  --color-w-muted: #5c5c5c;
+  --color-w-line: #bdbdbd;
+  --color-w-bg: #f3f3f1;
+  --color-w-red: #c8372d;
+  --color-w-red-deep: #a62c23;
+  --color-w-green: #2f7d4f;
+  --color-w-green-soft: #e4f2e8;
+
+  /* Palette « monde des âmes » (ancien monde 3D, plus utilisé dans le monde) */
   --color-soul-violet: #9a86e0;
   --color-soul-pink: #f0b4dc;
   --color-soul-blue: #8fb3f2;
@@ -97,6 +108,11 @@ body {
     radial-gradient(95% 130% at 25% 100%, rgba(240, 160, 215, 0.85), transparent 78%),
     radial-gradient(95% 130% at 80% 100%, rgba(140, 115, 225, 0.8), transparent 78%);
   animation: aura-rise 5s ease-in-out infinite;
+}
+
+/* Zone de remplacement d'une illustration (hachures des wireframes) */
+.illustration-placeholder {
+  background: repeating-linear-gradient(45deg, #ececec 0 10px, #f7f7f7 10px 20px);
 }
 
 /* Le ciel du monde des âmes, utilisé comme voile pendant la traversée */
